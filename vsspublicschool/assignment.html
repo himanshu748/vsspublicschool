@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - VSS Public School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div class="scroll-indicator"></div>
+    
+    <header class="header-container">
+        <div class="header-content">
+            <div class="school-logo-container">
+                <img src="logo.png" alt="School Logo" class="school-logo">
+            </div>
+            <div class="header-text">
+                <h1 id="sliding-text" class="blinking-text">V.S.S. PUBLIC SCHOOL</h1>
+                <h1 id="static-text" class="static blinking-text" style="display: none;">V.S.S. PUBLIC SCHOOL</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#facilities">Facilities</a></li>
+                <li><a href="index.html#faculty">Faculty</a></li>
+                <li><a href="assignment.html" class="active">Assignments</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container reveal">
+        <h2 class="section-title">Class Assignments</h2>
+        <div class="filter-options">
+            <select id="classFilter">
+                <option value="all">All Classes</option>
+                <option value="nursery">Nursery</option>
+                <option value="kg">Kindergarten</option>
+                <option value="1">Class I</option>
+                <option value="2">Class II</option>
+                <option value="3">Class III</option>
+                <option value="4">Class IV</option>
+                <option value="5">Class V</option>
+                <option value="6">Class VI</option>
+                <option value="7">Class VII</option>
+                <option value="8">Class VIII</option>
+                <option value="9">Class IX</option>
+                <option value="10">Class X</option>
+                <option value="12">Class XII</option>
+            </select>
+            <select id="subjectFilter">
+                <option value="all">All Subjects</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+            </select>
+        </div>
+        <div class="assignments-list"></div>
+    </main>
+
+    <footer class="footer-simple">
+        <div class="footer-info">
+            <p>Address: Adarsh colony, Road No.4, Front of Bishop Scott School, Jaganpura, Patna, Bihar, Pincode-800027</p>
+            <p><a href="https://maps.google.com/?q=Adarsh+colony,+Road+No.4,+Front+of+Bishop+Scott+School,+Jaganpura,+Patna,+Bihar,+Pincode-800027" target="_blank">View on Google Maps</a></p>
+            <p>Email: <a href="mailto:vsspublic82024@gmail.com">vsspublic82024@gmail.com</a></p>
+        </div>
+    </footer>
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/919199372327" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <i>💬</i>
+        </a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const App = {
+                initAssignments() {
+                    const assignmentsList = document.querySelector('.assignments-list');
+                    if (!assignmentsList) return;
+
+                    const filterAssignments = () => {
+                        const classValue = document.getElementById('classFilter')?.value || 'all';
+                        const subjectValue = document.getElementById('subjectFilter')?.value || 'all';
+
+                        const assignments = this.getAssignments()
+                            .filter(a => (classValue === 'all' || a.class === classValue))
+                            .filter(a => (subjectValue === 'all' || a.subject === subjectValue));
+
+                        this.renderAssignments(assignments, assignmentsList);
+                    };
+
+                    ['classFilter', 'subjectFilter'].forEach(id => {
+                        document.getElementById(id)?.addEventListener('change', filterAssignments);
+                    });
+
+                    filterAssignments();
+                },
+
+                getAssignments() {
+                    return [
+                        { class: 'nursery', subject: 'general', title: 'Weekly Activity', dueDate: '2024-02-20' },
+                        { class: 'kg', subject: 'english', title: 'Alphabet Practice', dueDate: '2024-02-21' },
+                        { class: '5', subject: 'science', title: 'Plant Life Cycle', dueDate: '2024-02-22' },
+                        { class: '8', subject: 'math', title: 'Algebra Basics', dueDate: '2024-02-23' },
+                        { class: '10', subject: 'science', title: 'Board Preparation', dueDate: '2024-02-24' }
+                    ];
+                },
+
+                renderAssignments(assignments, container) {
+                    container.innerHTML = assignments.length ? assignments.map(a => `
+                        <div class="assignment-card">
+                            <h3>${a.title}</h3>
+                            <p>Class ${a.class} - ${a.subject}</p>
+                            <p>Due: ${new Date(a.dueDate).toLocaleDateString()}</p>
+                            ${this.getDownloadButton(a.class, a.subject)}
+                        </div>
+                    `).join('') : '<p>No assignments found</p>';
+                },
+
+                getDownloadButton(classLevel, subject) {
+                    // Placeholder download links - replace these with actual file URLs later
+                    const downloadLinks = {
+                        'nursery': {
+                            'general': 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://campus.placements.iitb.ac.in/static/docs/brochure.pdf'
+                        },
+                        'kg': {
+                            'english': '#'  // Add actual link when available
+                        },
+                        '5': {
+                            'science': '#'  // Add actual link when available
+                        },
+                        '8': {
+                            'math': '#'     // Add actual link when available
+                        },
+                        '10': {
+                            'science': '#'   // Add actual link when available
+                        }
+                    };
+
+                    const link = downloadLinks[classLevel]?.[subject] || '#';
+                    const isPlaceholder = link === '#';
+
+                    return isPlaceholder ? 
+                        `<button class="download-btn" disabled>Coming Soon</button>` : 
+                        `<a href="${link}" class="download-btn" target="_blank">Download</a>`;
+                }
+            };
+
+            App.initAssignments();
+        });
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Handle navigation links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+</script>
+</body>
+</html>

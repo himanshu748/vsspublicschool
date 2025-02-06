@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VSS Public School - Excellence in Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="VSS Public School - Leading education institution with modern facilities">
+    <meta name="keywords" content="school, education, assignments, faculty">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div class="scroll-indicator"></div>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <img src="logo.png" alt="Loading..." class="loader-logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <header class="header-container">
+        <div class="header-content">
+            <div class="school-logo-container">
+                <img src="logo.png" alt="School Logo" class="school-logo">
+            </div>
+            <div class="header-text">
+                <h1 id="sliding-text" class="blinking-text">V.S.S. PUBLIC SCHOOL PLAYSCHOOL TO CLASS 8TH CBSE ENGLISH MEDIUM</h1>
+                <h1 id="static-text" class="static blinking-text" style="display: none;">VSS PUBLIC SCHOOL</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li> <!-- Changed from index.html to # -->
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="#contact" class="contact-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle">Dark Mode</button>
+        </div>
+    </nav>
+
+    <section class="hero reveal">
+        <div class="hero-content">
+            <div class="hero-slider">
+                <img src="classroom.jpg" alt="Modern Classrooms" class="active">
+                <img src="smart-classes.jpg" alt="Smart Classes">
+                <img src="playing-area.jpg" alt="Playing Area">
+                <img src="outside.jpg" alt="School Building">
+            </div>
+            <div class="hero-text">
+                <h2>Welcome to VSS Public School</h2>
+                <p>Building Tomorrow's Leaders Today</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container reveal">
+        <section id="notices">
+            <h2 class="section-title">Important Notices</h2>
+            <div class="notice-board"></div>
+        </section>
+
+        <section id="facilities" class="cards-grid">
+            <h2 class="section-title">Our Facilities</h2>
+            <div class="facilities-grid">
+                <div class="card">
+                    <img src="classroom.jpg" alt="Classroom">
+                    <div class="card-content">
+                        <h3>Modern Classrooms</h3>
+                        <p>Well-equipped learning spaces</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="smart-classes.jpg" alt="Computer Lab">
+                    <div class="card-content">
+                        <h3>Smart Classes</h3>
+                        <p>Modern facilities for digital learning</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="playing-area.jpg" alt="Playing Area">
+                    <div class="card-content">
+                        <h3>Playing Area</h3>
+                        <p>Spacious grounds for sports and activities</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="outside.jpg" alt="School Building">
+                    <div class="card-content">
+                        <h3>School Infrastructure</h3>
+                        <p>Modern building with state-of-the-art facilities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="director-section">
+            <h2 class="section-title">Our Director</h2>
+            <div class="director-content">
+                <div class="director-image">
+                    <img src="director.jpg" alt="Director - Mr. Dilip Sir">
+                </div>
+                <div class="director-info">
+                    <h3>Mr. Dilip Sir</h3>
+                    <p class="title">Director, VSS Public School</p>
+                    <ul class="director-qualifications">
+                        <li>M.Sc. in Mathematics</li>
+                        <li>B.Sc. in Mathematics</li>
+                        <li>20+ Years of Teaching Experience</li>
+                    </ul>
+                    <p>Mr. Dilip Sir is dedicated to fostering a nurturing and stimulating environment for students to excel academically and personally.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty" class="cards-grid">
+            <h2 class="section-title">Faculty Members</h2>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <img src="faculty1.jpg" alt="Faculty 1">
+                    <div class="card-content">
+                        <h3>Faculty Member 1</h3>
+                        <p>Subject: Mathematics</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="faculty2.jpg" alt="Faculty 2">
+                    <div class="card-content">
+                        <h3>Faculty Member 2</h3>
+                        <p>Subject: Science</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="faculty3.avif" alt="Faculty 3">
+                    <div class="card-content">
+                        <h3>Faculty Member 3</h3>
+                        <p>Subject: English</p>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="faculty4.jpg" alt="Faculty 4">
+                    <div class="card-content">
+                        <h3>Faculty Member 4</h3>
+                        <p>Subject: Social Studies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="vision-mission reveal">
+        <h2 class="section-title">Our Vision & Mission</h2>
+        <div class="vision-mission-content">
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To nurture young minds and foster a love for learning, preparing students to excel in a rapidly changing world.</p>
+            </div>
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To provide a holistic education that emphasizes academic excellence, character development, and community engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="future-plans reveal">
+        <h2 class="section-title">Our Future Plans</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>State-of-the-Art Facilities</h3>
+                <p>We are committed to building modern classrooms, laboratories, and sports facilities to provide the best learning environment.</p>
+            </div>
+            <div class="plan-card">
+                <h3>Innovative Curriculum</h3>
+                <p>Our curriculum will integrate technology and hands-on learning experiences to prepare students for future challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-contact" id="contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Message" required class="full-width"></textarea>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="social-media-section">
+                        <h4>Connect With Us</h4>
+                        <p class="social-text">Join our vibrant community on social media! Stay updated with school events, student achievements, and educational insights. Follow us for daily updates and become part of our growing family.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61569856925091" target="_blank" aria-label="Facebook">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.984 4.37 10.938 10.084 11.85v-8.384H7.044v-3.466h3.04V9.75c0-3.002 1.79-4.666 4.532-4.666 1.312 0 2.686.234 2.686.234v2.954H15.83c-1.49 0-1.955.925-1.955 1.874v2.25h3.328l-.532 3.466h-2.796v8.384C19.63 22.938 24 17.984 24 12c0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/vsspublicschool" target="_blank" aria-label="Instagram">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>Address: Adarsh colony, Road No.4, Front of Bishop Scott School, Jaganpura, Patna, Bihar, Pincode-800027</p>
+                    <p><a href="https://maps.google.com/?q=Adarsh+colony,+Road+No.4,+Front+of+Bishop+Scott+School,+Jaganpura,+Patna,+Bihar,+Pincode-800027" target="_blank">View on Google Maps</a></p>
+                    <p>Email: <a href="mailto:vsspublic82024@gmail.com">vsspublic82024@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/919199372327" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <i>💬</i>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
